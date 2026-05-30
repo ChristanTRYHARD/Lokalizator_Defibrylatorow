@@ -22,6 +22,6 @@ dependencyResolutionManagement {
     }
 }
 
-rootProject.name = "Lokalizator_bankomatów"
+rootProject.name = "Lokalizator_defibrylatorow"
 include(":app")
  

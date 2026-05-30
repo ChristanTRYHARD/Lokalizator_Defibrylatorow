@@ -1,4 +1,4 @@
-package com.example.lokalizator_bankomatw;
+package com.example.lokalizator_defibrylatorow;
 
 import retrofit2.Retrofit;
 import retrofit2.converter.gson.GsonConverterFactory;

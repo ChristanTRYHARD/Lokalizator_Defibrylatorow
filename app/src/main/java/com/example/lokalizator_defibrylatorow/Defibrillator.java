@@ -1,4 +1,4 @@
-package com.example.lokalizator_bankomatw;
+package com.example.lokalizator_defibrylatorow;
 
 import com.google.gson.annotations.SerializedName;
 import java.util.List;

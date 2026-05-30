@@ -3,7 +3,7 @@ plugins {
 }
 
 android {
-    namespace = "com.example.lokalizator_bankomatw"
+    namespace = "com.example.lokalizator_defibrylatorow"
     compileSdk {
         version = release(36) {
             minorApiLevel = 1
@@ -11,7 +11,7 @@ android {
     }
 
     defaultConfig {
-        applicationId = "com.example.lokalizator_bankomatw"
+        applicationId = "com.example.lokalizator_defibrylatorow"
         minSdk = 24
         targetSdk = 36
         versionCode = 1

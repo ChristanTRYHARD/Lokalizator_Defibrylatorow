@@ -1,4 +1,4 @@
-package com.example.lokalizator_bankomatw;
+package com.example.lokalizator_defibrylatorow;
 
 import java.util.Map;
 import retrofit2.Call;

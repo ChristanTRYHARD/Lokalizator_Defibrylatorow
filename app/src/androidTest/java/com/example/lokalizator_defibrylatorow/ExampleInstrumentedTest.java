@@ -1,4 +1,4 @@
-package com.example.lokalizator_bankomatw;
+package com.example.lokalizator_defibrylatorow;
 
 import android.content.Context;
 
@@ -21,6 +21,6 @@ public class ExampleInstrumentedTest {
     public void useAppContext() {
         // Context of the app under test.
         Context appContext = InstrumentationRegistry.getInstrumentation().getTargetContext();
-        assertEquals("com.example.lokalizator_bankomatw", appContext.getPackageName());
+        assertEquals("com.example.lokalizator_defibrylatorow", appContext.getPackageName());
     }
 }

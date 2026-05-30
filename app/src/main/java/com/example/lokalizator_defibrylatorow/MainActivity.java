@@ -1,4 +1,4 @@
-package com.example.lokalizator_bankomatw;
+package com.example.lokalizator_defibrylatorow;
 
 import android.content.DialogInterface;
 import android.content.Intent;
