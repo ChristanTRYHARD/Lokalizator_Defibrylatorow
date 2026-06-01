@@ -2,8 +2,13 @@
 <manifest xmlns:android="http://schemas.android.com/apk/res/android"
     xmlns:tools="http://schemas.android.com/tools">
 
+    <!-- Uprawnienie do korzystania z internetu (API Warszawy + Google Maps) -->
     <uses-permission android:name="android.permission.INTERNET" />
+
+    <!-- Dokładna lokalizacja (GPS) – potrzebna do pokazywania pozycji użytkownika -->
     <uses-permission android:name="android.permission.ACCESS_FINE_LOCATION" />
+
+    <!-- Przybliżona lokalizacja (WiFi, BTS) – alternatywa gdy GPS jest słaby -->
     <uses-permission android:name="android.permission.ACCESS_COARSE_LOCATION" />
 
     <application
@@ -17,9 +22,13 @@
         android:theme="@style/Theme.Lokalizator_bankomatw"
         tools:targetApi="31">
 
+        <!-- Klucz Google Maps pobierany dynamicznie z build.gradle poprzez manifestPlaceholders -->
+        <!-- Wartość ${MAPS_API_KEY} zostanie automatycznie zastąpiona kluczem z local.properties podczas kompilacji -->
+        <!-- ${MAPS_API_KEY} to placeholder – symboliczna zmienna, której prawdziwa wartość jest wstrzykiwana przez Gradle -->
         <meta-data
             android:name="com.google.android.geo.API_KEY"
-            android:value="AIzaSyCxdm91FhYZbL4ryL0NdsG2kD_Y1PXFhLM" />
+            android:value="${MAPS_API_KEY}" />
+
 
         <activity
             android:name=".MainActivity"
