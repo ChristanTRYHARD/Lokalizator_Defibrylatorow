@@ -30,7 +30,7 @@ public class MainActivity extends AppCompatActivity implements OnMapReadyCallbac
     private final Handler autoRetryHandler = new Handler();
     private Runnable retryRunnable;
 
-    private static final String API_TOKEN = "eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJqdGkiOiJfQXFoUkVmU2FyM1d2dVlyUEtROUdmQ1VXYmNMc050YVRyenNpODF3ejQ4IiwiaWF0IjoxNzc5OTY3OTgzfQ.iYBKxwGFZ8hr1zacttpNAL8YHkaQLiajW9781NsVhts";
+    private static final String API_TOKEN = BuildConfig.WARSAW_API_KEY;
 
     @Override
     protected void onCreate(Bundle savedInstanceState) {

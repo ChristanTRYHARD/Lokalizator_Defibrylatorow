@@ -45,12 +45,23 @@ android {
         // Wstrzyknięcie klucza API Google Maps do manifestu jako placeholder ${MAPS_API_KEY}
         manifestPlaceholders["MAPS_API_KEY"] = localProperties.getProperty("MAPS_API_KEY")
             ?: error("MAPS_API_KEY nie jest zdefiniowany w local.properties")
+
+        // Wstrzyknięcie klucza API Warszawy do kodu Javy
+        val warsawApiKey = localProperties.getProperty("WARSAW_API_KEY")
+            ?: error("WARSAW_API_KEY nie jest zdefiniowany w local.properties")
+        //Czyta wartość pod WARSAW_API_KEY
+        //Automatycznie pisze klasę Javy o nazwie BuildConfig z polem z moim kluczem
+        buildConfigField("String", "WARSAW_API_KEY", "\"$warsawApiKey\"")
     }
 
     // Włączenie dodatkowych funkcji builda
     buildFeatures {
         // ViewBinding: bezpieczne, kompilowane odwołania do widoków zamiast findViewById
         viewBinding = true
+
+        // Pozwalam na generacje tej klasy (domyślnie jest to wyłączone)
+        // Przydaje sie przy chowaniu API z Warszawy
+        buildConfig = true
     }
 
     // Konfiguracja wariantów builda (debug / release)
