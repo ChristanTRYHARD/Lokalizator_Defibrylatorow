@@ -11,6 +11,12 @@
     <!-- Przybliżona lokalizacja (WiFi, BTS) – alternatywa gdy GPS jest słaby -->
     <uses-permission android:name="android.permission.ACCESS_COARSE_LOCATION" />
 
+    <!--
+    Główna konfiguracja aplikacji.
+    - allowBackup: zezwala na tworzenie kopii zapasowych danych użytkownika przez system.
+    - supportsRtl: włącza wsparcie dla języków pisanych od prawej do lewej (np. arabski, hebrajski).
+    - targetApi: deklaruje, że aplikacja jest świadoma zmian w API 31+ (Android 12).
+-->
     <application
         android:allowBackup="true"
         android:dataExtractionRules="@xml/data_extraction_rules"
