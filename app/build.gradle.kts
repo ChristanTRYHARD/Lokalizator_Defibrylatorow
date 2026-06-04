@@ -6,10 +6,18 @@ plugins {
 }
 
 // Wczytanie pliku local.properties
+
+//Tworze obiekt Properties (tak jak plik .properties, to jest słownik, czyli dane w formacie klucz - wartość)
 val localProperties = Properties()
+
+//Pobieram referencję do pliku local.properties
 val localPropertiesFile = rootProject.file("local.properties")
 if (localPropertiesFile.exists()) {
+
+    //Otwieram strumień do pliku local.properties, .use automatycznie zamknie plik po zakończeniu działania
     localPropertiesFile.inputStream().use {
+
+        //Wczytuje zawartość pliku
         localProperties.load(it)
     }
 }
