@@ -29,7 +29,7 @@
                     android:id="@+id/tvDetailsTitle"
                     android:layout_width="match_parent"
                     android:layout_height="wrap_content"
-                    android:text="Nazwa Obiektu"
+                    android:text="@string/nazwa_obiektu"
                     android:textColor="#FFFFFF"
                     android:textSize="22sp"
                     android:textStyle="bold" />
@@ -39,7 +39,7 @@
                     android:layout_width="match_parent"
                     android:layout_height="wrap_content"
                     android:layout_marginTop="4dp"
-                    android:text="ID urządzenia: 000"
+                    android:text="@string/id_urzadzenia_000"
                     android:textColor="#FFCDD2"
                     android:textSize="14sp" />
             </LinearLayout>
@@ -60,7 +60,7 @@
                 <TextView
                     android:layout_width="wrap_content"
                     android:layout_height="wrap_content"
-                    android:text="Adres"
+                    android:text="@string/adres"
                     android:textColor="#757575"
                     android:textSize="12sp"
                     android:textStyle="bold" />
@@ -71,7 +71,7 @@
                     android:layout_height="wrap_content"
                     android:layout_marginTop="4dp"
                     android:layout_marginBottom="4dp"
-                    android:text="ul. Przykładowa 12"
+                    android:text="@string/ul_przykladowa_12"
                     android:textColor="#212121"
                     android:textSize="16sp" />
 
@@ -80,14 +80,14 @@
                     android:layout_width="match_parent"
                     android:layout_height="wrap_content"
                     android:layout_marginBottom="16dp"
-                    android:text="00-000 Warszawa"
+                    android:text="@string/_00_000_warszawa"
                     android:textColor="#212121"
                     android:textSize="14sp" />
 
                 <TextView
                     android:layout_width="wrap_content"
                     android:layout_height="wrap_content"
-                    android:text="Dostępność ogólna"
+                    android:text="@string/dostepnoscOgolna"
                     android:textColor="#757575"
                     android:textSize="12sp"
                     android:textStyle="bold" />
@@ -98,7 +98,7 @@
                     android:layout_height="wrap_content"
                     android:layout_marginTop="4dp"
                     android:layout_marginBottom="8dp"
-                    android:text="Dostępny całodobowo"
+                    android:text="@string/dostepny_calodobowo"
                     android:textColor="#2E7D32"
                     android:textSize="16sp"
                     android:textStyle="bold" />
@@ -106,7 +106,7 @@
                 <TextView
                     android:layout_width="wrap_content"
                     android:layout_height="wrap_content"
-                    android:text="Szczegółowe godziny dostępu"
+                    android:text="@string/szczegoowe_godziny_dostepu"
                     android:textColor="#757575"
                     android:textSize="12sp"
                     android:textStyle="bold" />
@@ -117,14 +117,14 @@
                     android:layout_height="wrap_content"
                     android:layout_marginTop="4dp"
                     android:layout_marginBottom="16dp"
-                    android:text="Poniedziałek - Piątek: 8:00 - 16:00"
+                    android:text="@string/poniedzialek_piatek_8_00_16_00"
                     android:textColor="#212121"
                     android:textSize="14sp" />
 
                 <TextView
                     android:layout_width="wrap_content"
                     android:layout_height="wrap_content"
-                    android:text="Miejsce przechowywania"
+                    android:text="@string/miejsce_przechowywania"
                     android:textColor="#757575"
                     android:textSize="12sp"
                     android:textStyle="bold" />
@@ -135,14 +135,14 @@
                     android:layout_height="wrap_content"
                     android:layout_marginTop="4dp"
                     android:layout_marginBottom="8dp"
-                    android:text="Wewnątrz budynku / Na zewnątrz"
+                    android:text="@string/wewnatrz_budynku_na_zewnatrz"
                     android:textColor="#212121"
                     android:textSize="14sp" />
 
                 <TextView
                     android:layout_width="wrap_content"
                     android:layout_height="wrap_content"
-                    android:text="Dokładny opis lokalizacji"
+                    android:text="@string/dokladny_opis_lokalizacji"
                     android:textColor="#757575"
                     android:textSize="12sp"
                     android:textStyle="bold" />
@@ -153,14 +153,14 @@
                     android:layout_height="wrap_content"
                     android:layout_marginTop="4dp"
                     android:layout_marginBottom="16dp"
-                    android:text="Przy wejściu głównym, obok portierni."
+                    android:text="@string/przy_wejsciu_gownym_obok_portierni"
                     android:textColor="#212121"
                     android:textSize="14sp" />
 
                 <TextView
                     android:layout_width="wrap_content"
                     android:layout_height="wrap_content"
-                    android:text="Typ dostępu publicznego"
+                    android:text="@string/typ_dostepu_publicznego"
                     android:textColor="#757575"
                     android:textSize="12sp"
                     android:textStyle="bold" />
@@ -171,14 +171,14 @@
                     android:layout_height="wrap_content"
                     android:layout_marginTop="4dp"
                     android:layout_marginBottom="8dp"
-                    android:text="Publiczny / Prywatny"
+                    android:text="@string/publiczny_prywatny"
                     android:textColor="#212121"
                     android:textSize="14sp" />
 
                 <TextView
                     android:layout_width="wrap_content"
                     android:layout_height="wrap_content"
-                    android:text="Producent urządzenia"
+                    android:text="@string/producent_urzadzenia"
                     android:textColor="#757575"
                     android:textSize="12sp"
                     android:textStyle="bold" />
@@ -189,14 +189,14 @@
                     android:layout_height="wrap_content"
                     android:layout_marginTop="4dp"
                     android:layout_marginBottom="8dp"
-                    android:text="Zoll / Medtronic / Philips"
+                    android:text="@string/zoll_medtronic_philips"
                     android:textColor="#212121"
                     android:textSize="14sp" />
 
                 <TextView
                     android:layout_width="wrap_content"
                     android:layout_height="wrap_content"
-                    android:text="Dodatkowy opis urządzenia"
+                    android:text="@string/dodatkowy_opis_urzadzenia"
                     android:textColor="#757575"
                     android:textSize="12sp"
                     android:textStyle="bold" />
@@ -206,7 +206,7 @@
                     android:layout_width="match_parent"
                     android:layout_height="wrap_content"
                     android:layout_marginTop="4dp"
-                    android:text="Brak dodatkowego opisu"
+                    android:text="@string/brak_dodatkowego_opisu"
                     android:textColor="#212121"
                     android:textSize="14sp" />
             </LinearLayout>
@@ -218,7 +218,7 @@
             android:layout_height="wrap_content"
             android:layout_marginTop="20dp"
             android:layout_marginBottom="16dp"
-            android:text="Powrót do mapy"
+            android:text="@string/powrot_do_mapy"
             android:backgroundTint="@color/btn_bg_selector"
             android:textColor="@color/btn_text_selector"
             android:textSize="16sp"

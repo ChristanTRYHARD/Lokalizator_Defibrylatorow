@@ -1,3 +1,23 @@
 <resources>
     <string name="app_name">Lokalizator defibrylatorów AED</string>
+    <string name="nazwa_obiektu">Nazwa Obiektu</string>
+    <string name="id_urzadzenia_000">ID urzadzenia: 000</string>
+    <string name="adres">Adres</string>
+    <string name="ul_przykladowa_12">ul. Przykładowa 12</string>
+    <string name="_00_000_warszawa">00-000 Warszawa</string>
+    <string name="dostepnoscOgolna">Dostępność ogólna</string>
+    <string name="dostepny_calodobowo">Dostępny całodobowo</string>
+    <string name="szczegoowe_godziny_dostepu">Szczegółowe godziny dostępu</string>
+    <string name="poniedzialek_piatek_8_00_16_00">Poniedziałek - Piątek: 8:00 - 16:00</string>
+    <string name="miejsce_przechowywania">Miejsce przechowywania</string>
+    <string name="wewnatrz_budynku_na_zewnatrz">Wewnątrz budynku / Na zewnątrz</string>
+    <string name="dokladny_opis_lokalizacji">Dokładny opis lokalizacji</string>
+    <string name="przy_wejsciu_gownym_obok_portierni">Przy wejściu głównym, obok portierni.</string>
+    <string name="typ_dostepu_publicznego">Typ dostępu publicznego</string>
+    <string name="publiczny_prywatny">Publiczny / Prywatny</string>
+    <string name="producent_urzadzenia">Producent urządzenia</string>
+    <string name="zoll_medtronic_philips">Zoll / Medtronic / Philips</string>
+    <string name="dodatkowy_opis_urzadzenia">Dodatkowy opis urządzenia</string>
+    <string name="brak_dodatkowego_opisu">Brak dodatkowego opisu</string>
+    <string name="powrot_do_mapy">Powrót do mapy</string>
 </resources>

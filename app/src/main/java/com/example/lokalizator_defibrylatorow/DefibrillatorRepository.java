@@ -53,6 +53,7 @@ public class DefibrillatorRepository {
     }
 
     /**
+     * Todo: Może zrobić z tego nową klase np OfflineAPI
      * Metoda wywoływana jawnie, gdy użytkownik zgodzi się na dane testowe
      */
     public void fetchMockData(OnDataReadyCallback callback) {
