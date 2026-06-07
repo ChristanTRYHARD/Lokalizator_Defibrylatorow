@@ -11,23 +11,58 @@ import retrofit2.Callback;
 import retrofit2.Response;
 
 public class DefibrillatorRepository {
+    // Etykieta do logów
     private static final String TAG = "RETROFIT_DEBUG";
 
+
+    /**
+     * CALLBACK (wywołanie zwrotne) to nie to samo co RETURN.
+     *
+     * RETURN:
+     * - Metoda KOŃCZY się natychmiast i oddaje wynik do miejsca, które ją wywołało.
+     * - Działa synchronicznie — czekasz, aż metoda skończy, bo inaczej nie masz wyniku.
+     * - Przykład: int wynik = policzSume(2, 3); // metoda zwraca 5 i KONIEC.
+     *
+     * CALLBACK:
+     * - Metoda NIE zwraca wyniku od razu. Zamiast tego przyjmuje OBIEKT (ten interfejs),
+     *   który ma metody gotowe na wynik.
+     * - Działa asynchronicznie — metoda idzie coś robić (np. czeka na serwer 3 sekundy),
+     *   a wynik dostajesz PÓŹNIEJ, wtedy kiedy robotka się skończy.
+     * - Nie czekasz. Aplikacja żyje dalej. Jak serwer odpowie — callback CIĘ ZAWOŁA.
+     * - Przykład: repository.pobierzDane(token, this); // idzie po dane, a jak wróci — woła onSuccess() albo onError()
+     *
+     * RÓŻNICA W JEDNYM ZDANIU:
+     * RETURN = "daj mi to TERAZ i skończ rozmowę".
+     * CALLBACK = "idź to zrób, a jak skończysz — ZADZWOŃ DO MNIE, ja poczekam na telefon".
+     */
+    // Interfejs callback — kto używa Repository, musi obsłużyć oba scenariusze
     public interface OnDataReadyCallback {
+        // Sukces: przekazuję pobraną listę defibrylatorów
         void onSuccess(List<Defibrillator> defibrillators);
+        // Porażka: przekazuję komunikat o błędzie
         void onError(String errorMessage);
     }
 
+
+    /*
+    Wysyłam zapytania i je odbieram
+     */
     public void fetchAllDefibrillators(String token, final OnDataReadyCallback callback) {
+        // przygotowanie koperty
         Log.d(TAG, "Rozpoczynam wysyłanie zapytania POST...");
         OtwarteDaneWarszawyAPI api = RetrofitClient.getApiService();
 
         Map<String, String> emptyBody = new HashMap<>();
+
+        // Zakładam że klucz przyjdzie jako poprawny token ablo bez prefiksu "Bearer "
         String formattedToken = token.startsWith("Bearer ") ? token : "Bearer " + token;
 
         Call<DefibrillatorResponse> call = api.getAllDefibrillators(formattedToken, emptyBody);
 
+        // wysyłka
         call.enqueue(new Callback<DefibrillatorResponse>() {
+
+            // Powrót z odpowiedzią
             @Override
             public void onResponse(Call<DefibrillatorResponse> call, Response<DefibrillatorResponse> response) {
                 Log.d(TAG, "Otrzymano odpowiedź z serwera. Kod HTTP: " + response.code());
@@ -44,6 +79,7 @@ public class DefibrillatorRepository {
                 }
             }
 
+            // nie dało rady wysłać
             @Override
             public void onFailure(Call<DefibrillatorResponse> call, Throwable t) {
                 Log.e(TAG, "Krytyczny błąd sieci!", t);

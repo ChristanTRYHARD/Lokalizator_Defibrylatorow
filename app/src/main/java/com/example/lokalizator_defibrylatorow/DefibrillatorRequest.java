@@ -4,6 +4,7 @@ import com.google.gson.annotations.SerializedName;
 
 public class DefibrillatorRequest {
 
+    // To jest naklejka na tym jednym polu, która mówi Gsonowi: „jak będziesz pakował ten obiekt do JSONa, użyj innej nazwy klucza."
     @SerializedName("defibrillator_id")
     private String defibrillatorId;
 

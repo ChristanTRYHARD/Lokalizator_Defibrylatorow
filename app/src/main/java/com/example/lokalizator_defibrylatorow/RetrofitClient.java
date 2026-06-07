@@ -4,6 +4,7 @@ import retrofit2.Retrofit;
 import retrofit2.converter.gson.GsonConverterFactory;
 
 public class RetrofitClient {
+    // Bazowy adres serwera API Warszawy. Retrofit dokleja do niego ścieżki z endpointów.
     private static final String BASE_URL = "https://dane.um.warszawa.pl/";
     private static Retrofit retrofit = null;
 
